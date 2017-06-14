@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="efb_spi_i2c" module="efb_spi_i2c" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2012 03 14 17:04:40.775" version="1.0" type="Module" synthesis="synplify" source_format="Verilog HDL">
+  <Package>
+		<File name="efb_spi_i2c.lpc" type="lpc" modified="2012 03 14 17:04:38.993"/>
+		<File name="efb_spi_i2c.v" type="top_level_verilog" modified="2012 03 14 17:04:39.033"/>
+		<File name="efb_spi_i2c_tmpl.v" type="template_verilog" modified="2012 03 14 17:04:39.034"/>
+  </Package>
+</DiamondModule>

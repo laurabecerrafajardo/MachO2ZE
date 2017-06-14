@@ -1,0 +1,5 @@
+CLRFLAG  i
+CFGSTDBY  i
+CFGWAKE  i
+STDBY  o
+SFLAG  o

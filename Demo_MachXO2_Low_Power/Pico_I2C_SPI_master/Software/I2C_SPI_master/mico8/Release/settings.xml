@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROJECT path="..">
+<SYSLIB>
+<MSB_FILE path="./../../../Hardware/mico8/soc" name="mico8.msb" />
+<LATTICE_MDK_PERIPHERALS rootdir="../../../../Hardware/mico8/soc/../components"/>
+<BUILD_CFG name="Release"/>
+<USER_PREFS name="user.pref" path=".."/>
+<BUILD>
+<COMPILER flags="-D__MICO_NO_INTERRUPTS__ -D__MICOEFB_NO_I2C_INTERRUPT__ -D__MICOEFB_NO_SPI_INTERRUPT__ -D__MICOEFB_NO_TC_INTERRUPT__ -I./../mico8 -ffunction-sections -mcall-prologues -O1 -Wall"/>
+</BUILD>
+</SYSLIB>
+</PROJECT>

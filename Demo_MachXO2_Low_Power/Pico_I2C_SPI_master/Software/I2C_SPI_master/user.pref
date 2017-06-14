@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SYSLIB>
+<MSB_FILE name="mico8.msb" path="../../Hardware/mico8/soc"/>
+<MemorySections UCflag="false">
+<Section DEPLOY="yes" Name=".text" Value=""/>
+<Section Name=".rodata" Value=""/>
+<Section Name=".data" Value=""/>
+</MemorySections>
+<LinkerSettings>
+<Param Name="UserDefinedLinkerFile" Value=""/>
+</LinkerSettings>
+<STDIO_Redirection>
+<Param InstanceName="uart" Name="stdin" Text="RS-232"/>
+<Param InstanceName="uart" Name="stdout" Text="RS-232"/>
+<Param InstanceName="uart" Name="stderr" Text="RS-232"/>
+</STDIO_Redirection>
+<LibSettings>
+<Param Name="SyslibOption" Value="on"/>
+<Param Name="USE_SMALL_LIBC" Value="FALSE"/>
+<Param Name="USE_STANDALONE_SMALL_PRINTF" Value="TRUE"/>
+</LibSettings>
+<PREPROCESSOR_IFDEF>
+<Param IFDEF_NAME="__MICO_NO_INTERRUPTS__" Value="on"/>
+<Param IFDEF_NAME="__MICOUART_BLOCKING__" Value="off"/>
+<Param IFDEF_NAME="__MICOUART_INTERRUPT__" Value="off"/>
+<Param IFDEF_NAME="__MICOPASSTHRU_USER_IRQ_HANDLER__" Value="off"/>
+<Param IFDEF_NAME="__MICOEFB_NO_I2C_INTERRUPT__" Value="on"/>
+<Param IFDEF_NAME="__MICOEFB_NO_SPI_INTERRUPT__" Value="on"/>
+<Param IFDEF_NAME="__MICOEFB_NO_TC_INTERRUPT__" Value="on"/>
+</PREPROCESSOR_IFDEF>
+</SYSLIB>

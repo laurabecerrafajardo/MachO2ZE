@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="LCDCharMap" module="LCDCharMap" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2011 04 07 23:20:55.246" version="5.0" type="Module" synthesis="synplify" source_format="Verilog HDL">
+  <Package>
+		<File name="LCDCharMap.lpc" type="lpc" modified="2011 04 07 23:20:53.918"/>
+		<File name="LCDCharMap.v" type="top_level_verilog" modified="2011 04 07 23:20:54.059"/>
+		<File name="LCDCharMap_tmpl.v" type="template_verilog" modified="2011 04 07 23:20:54.059"/>
+		<File name="c:/documents and settings/cwest/desktop/machxo2_pico_demos/soc/demo_machxo2_pico_environment_scanning9/demo_machxo2_pico_environment_scanning/source/ipexpress/lcdcharmap.mem" type="mem" modified="2011 04 07 23:20:03.436"/>
+		<File name="tb_LCDCharMap_tmpl.v" type="testbench_verilog" modified="2011 04 07 23:20:54.074"/>
+  </Package>
+</DiamondModule>

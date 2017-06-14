@@ -1,0 +1,48 @@
+[Device]
+Family=machxo2
+PartType=LCMXO2-1200ZE
+PartName=LCMXO2-1200ZE-3MG132C
+SpeedGrade=3
+Package=CSBGA132
+OperatingCondition=COM
+Status=S
+
+[IP]
+VendorName=Lattice Semiconductor Corporation
+CoreType=LPM
+CoreStatus=Demo
+CoreName=ROM
+CoreRevision=5.0
+ModuleName=LCDCharMap
+SourceFormat=Verilog HDL
+ParameterFileVersion=1.0
+Date=04/07/2011
+Time=23:20:53
+
+[Parameters]
+Verilog=1
+VHDL=0
+EDIF=1
+Destination=Synplicity
+Expression=BusA(0 to 7)
+Order=Big Endian [MSB:LSB]
+IO=0
+Address=256
+Data=7
+enByte=0
+ByteSize=9
+OutputEn=1
+ClockEn=0
+Optimization=Speed
+Reset=Sync
+Reset1=Sync
+Init=0
+MemFile=c:/documents and settings/cwest/desktop/machxo2_pico_demos/soc/demo_machxo2_pico_environment_scanning9/demo_machxo2_pico_environment_scanning/source/ipexpress/lcdcharmap.mem
+MemFormat=bin
+EnECC=0
+Pipeline=0
+Write=Normal
+init_data=0
+
+[FilesGenerated]
+c:/documents and settings/cwest/desktop/machxo2_pico_demos/soc/demo_machxo2_pico_environment_scanning9/demo_machxo2_pico_environment_scanning/source/ipexpress/lcdcharmap.mem=mem

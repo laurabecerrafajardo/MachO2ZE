@@ -1,0 +1,26 @@
+SCUBA, Version Diamond_1.4_Production (87)
+Thu Mar 08 11:50:11 2012
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2011 Lattice Semiconductor Corporation,  All rights reserved.
+
+    Issued command   : C:\lscc\diamond\1.4\ispfpga\bin\nt\scuba.exe -w -n pwr_ctrl -lang verilog -synth synplify -bus_exp 7 -bb -arch xo2c00 -type power_cntl -entry CFG -s2s BYPASS -wake CFG -standby -e 
+    Circuit name     : pwr_ctrl
+    Module type      : power_cntl
+    Module Version   : 1.0
+    Ports            : 
+	Inputs       : CLRFLAG, CFGSTDBY, CFGWAKE
+	Outputs      : STDBY, SFLAG
+    I/O buffer       : not inserted
+    EDIF output      : suppressed
+    Verilog output   : pwr_ctrl.v
+    Verilog template : pwr_ctrl_tmpl.v
+    Verilog purpose  : for synthesis and simulation
+    Bus notation     : big endian
+    Report output    : pwr_ctrl.srp
+    Element Usage    :
+          PCNTR : 1
+    Estimated Resource Usage:

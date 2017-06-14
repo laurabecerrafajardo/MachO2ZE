@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="LCDCharMapLUTs" module="Distributed_ROM" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2012 03 10 21:49:26.593" version="2.4" type="Module" synthesis="synplify" source_format="Verilog">
+  <Package>
+		<File name="LCDCharMapLUTs.lpc" type="lpc" modified="2012 03 10 21:49:22.187"/>
+		<File name="LCDCharMapLUTs.v" type="top_level_verilog" modified="2012 03 10 21:49:22.375"/>
+		<File name="LCDCharMapLUTs_tmpl.v" type="template_verilog" modified="2012 03 10 21:49:22.390"/>
+		<File name="c:/joem/xo2_ae_projects/xo2_pico_ae7/hardware/source/picolcddriver/lcdcharmapluts.mem" type="mem" modified="2012 03 10 21:48:45.156"/>
+		<File name="tb_LCDCharMapLUTs_tmpl.v" type="testbench_verilog" modified="2012 03 10 21:49:22.406"/>
+  </Package>
+</DiamondModule>

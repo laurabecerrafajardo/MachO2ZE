@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fileVersion 3.1.0?>
+
+<ManagedProjectBuildInfo>
+<project id="I2C_lite.com.lattice.mdk8.managedbuilder.ui.projectType.excutable.1100499475" name="LatticeMico8  Elf Executable" projectType="com.lattice.mdk8.managedbuilder.ui.projectType.excutable">
+<configuration artifactName="I2C_lite" cleanCommand="rm -f" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.VCErrorParser" id="com.lattice.mdk8.managedbuilder.ui.configuration.release.1623995201" name="Release" parent="com.lattice.mdk8.managedbuilder.ui.configuration.release">
+<toolChain id="com.lattice.mdk8.managedbuilder.ui.toolChain.release.1752546062" name="Release Toolchain" superClass="com.lattice.mdk8.managedbuilder.ui.toolChain.release">
+<tool id="com.lattice.mdk8.managedbuilder.ui.tool.release.compiler.1843072363" name="LatticeMico8 C/C++ Compiler" superClass="com.lattice.mdk8.managedbuilder.ui.tool.release.compiler">
+<option id="com.lattice.mdk8.managedbuilder.ui.option.optim.125268634" superClass="com.lattice.mdk8.managedbuilder.ui.option.optim" value="com.lattice.mdk8.managedbuilder.ui.enumeratedOptionValue.optim1" valueType="enumerated"/>
+</tool>
+<tool id="com.lattice.mdk8.managedbuilder.ui.tool.syslib.release.compiler.2143827256" name="LatticeMico8 C System Library Compiler" superClass="com.lattice.mdk8.managedbuilder.ui.tool.syslib.release.compiler">
+<option id="com.lattice.mdk8.managedbuilder.ui.lib.option.syslib.release.optim.330553352" superClass="com.lattice.mdk8.managedbuilder.ui.lib.option.syslib.release.optim" value="com.lattice.mdk8.managedbuilder.ui.lib.enumeratedOptionValue.optim2" valueType="enumerated"/>
+<option id="com.lattice.mdk8.managedbuilder.ui.lib.option.warn.1171551132" superClass="com.lattice.mdk8.managedbuilder.ui.lib.option.warn" value="true" valueType="boolean"/>
+</tool>
+<tool id="com.lattice.mdk8.managedbuilder.ui.tool.release.linker.713530680" name="LatticeMico8 Linker" superClass="com.lattice.mdk8.managedbuilder.ui.tool.release.linker">
+<option id="com.lattice.mdk8.managedbuilder.ui.option.linker.flags.641647676" superClass="com.lattice.mdk8.managedbuilder.ui.option.linker.flags" value="-Wl,--gc-sections -Wl,-Map,mem.map" valueType="string"/>
+</tool>
+<macros/>
+</toolChain>
+</configuration>
+<configuration artifactName="I2C_lite" cleanCommand="rm -f" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.VCErrorParser" id="com.lattice.mdk8.managedbuilder.ui.configuration.release.1635226552" name="SIM" parent="com.lattice.mdk8.managedbuilder.ui.configuration.release">
+<toolChain id="com.lattice.mdk8.managedbuilder.ui.toolChain.release.345875547" name="Release Toolchain" superClass="com.lattice.mdk8.managedbuilder.ui.toolChain.release">
+<tool id="com.lattice.mdk8.managedbuilder.ui.tool.release.compiler.1119629581" name="LatticeMico8 C/C++ Compiler" superClass="com.lattice.mdk8.managedbuilder.ui.tool.release.compiler">
+<option id="com.lattice.mdk8.managedbuilder.ui.option.defines.711168965" superClass="com.lattice.mdk8.managedbuilder.ui.option.defines" valueType="definedSymbols">
+<listOptionValue builtIn="false" value="SIMULATION"/>
+</option>
+</tool>
+<tool id="com.lattice.mdk8.managedbuilder.ui.tool.syslib.release.compiler.1043197185" name="LatticeMico8 C System Library Compiler" superClass="com.lattice.mdk8.managedbuilder.ui.tool.syslib.release.compiler">
+<option id="com.lattice.mdk8.managedbuilder.ui.lib.option.syslib.release.optim.1874012754" name="LatticeMico8 Optimization Options" superClass="com.lattice.mdk8.managedbuilder.ui.lib.option.syslib.release.optim" value="com.lattice.mdk8.managedbuilder.ui.lib.enumeratedOptionValue.optims" valueType="enumerated"/>
+<option id="com.lattice.mdk8.managedbuilder.ui.lib.option.warn.441788455" name="LatticeMico8 Warning option" superClass="com.lattice.mdk8.managedbuilder.ui.lib.option.warn" value="true" valueType="boolean"/>
+</tool>
+<tool id="com.lattice.mdk8.managedbuilder.ui.tool.release.linker.890899835" name="LatticeMico8 Linker" superClass="com.lattice.mdk8.managedbuilder.ui.tool.release.linker">
+<option id="com.lattice.mdk8.managedbuilder.ui.option.linker.flags.1222087432" name="Linker Flags" superClass="com.lattice.mdk8.managedbuilder.ui.option.linker.flags" value="-Wl,--gc-sections -Wl,-Map,mem.map" valueType="string"/>
+</tool>
+<macros expandEnvironmentMacros="true"/>
+</toolChain>
+</configuration>
+</project>
+</ManagedProjectBuildInfo>

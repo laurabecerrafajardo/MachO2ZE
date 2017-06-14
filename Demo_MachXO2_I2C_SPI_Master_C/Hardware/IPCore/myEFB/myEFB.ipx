@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="myEFB" module="myEFB" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2012 04 18 21:04:35.921" version="1.0" type="Module" synthesis="synplify" source_format="Verilog HDL">
+  <Package>
+		<File name="myEFB.lpc" type="lpc" modified="2012 04 18 21:04:32.187"/>
+		<File name="myEFB.v" type="top_level_verilog" modified="2012 04 18 21:04:32.359"/>
+		<File name="myEFB_tmpl.v" type="template_verilog" modified="2012 04 18 21:04:32.359"/>
+  </Package>
+</DiamondModule>

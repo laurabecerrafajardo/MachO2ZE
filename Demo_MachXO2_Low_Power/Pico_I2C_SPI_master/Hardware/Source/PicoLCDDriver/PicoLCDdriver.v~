@@ -1,0 +1,251 @@
+// --------------------------------------------------------------------
+// >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<<
+// --------------------------------------------------------------------
+// Copyright (c) 2001 - 2011 by Lattice Semiconductor Corporation  
+// --------------------------------------------------------------------  
+//  
+// Permission:                    
+//
+// Lattice Semiconductor grants permission to use this code for use
+// in synthesis for any Lattice programmable logic product. Other
+// use of this code, including the selling or duplication of any
+// portion is strictly prohibited.
+//
+// Disclaimer:
+//
+// This VHDL or Verilog source code is intended as a design reference
+// which illustrates how these types of functions can be implemented.
+// It is the user's responsibility to verify their design for
+// consistency and functionality through the use of formal
+// verification methods. Lattice Semiconductor provides no warranty
+// regarding the use or functionality of this code.
+//
+// --------------------------------------------------------------------
+//
+// Lattice Semiconductor Corporation
+// 5555 NE Moore Court
+// Hillsboro, OR 97214
+// U.S.A
+//
+// TEL: 1-800-Lattice (USA and Canada)
+// 503-268-8001 (other locations)
+//
+// web: http://www.latticesemi.com/
+// email: techsupport@latticesemi.com
+//  
+// --------------------------------------------------------------------
+// Code Revision History :
+// --------------------------------------------------------------------
+// Ver: | Author |Mod. Date |Changes Made:
+// V1.0 | S.H    |10/25/11  |Initial ver
+//  
+// --------------------------------------------------------------------
+
+module PicoLCDdriver(
+
+	input	rst_n, // Async Reset
+	input	clk,   // 2.08 MHz
+	input   LCD_enb,   // Enable LCD display, else float the outputs
+	
+	// 4 input digits
+	input  [7:0] LCD1,		// Left charactor to display
+	input  [7:0] LCD2,
+	input  [7:0] LCD3,
+	input  [7:0] LCD4,		// Right charactor to display
+	input  LCDDP1,   		// display Decimal Point after LCD1
+	input  LCDDP2,   		// display Decimal Point after LCD2   
+	input  LCDDP3,   		// display Decimal Point after LCD3   
+	input  LCDCol,   		// display Colon after LCD2   
+	
+	// to LCD display panel
+	output 	LCD_COM0,
+	output 	LCD_COM1,
+	output 	LCD_COM2,
+	output 	LCD_COM3,
+	output 	LCD_5,
+	output 	LCD_6,
+	output 	LCD_7,
+	output 	LCD_8,
+	output 	LCD_9,
+	output 	LCD_10,
+	output 	LCD_11,
+	output 	LCD_12
+
+
+
+);
+
+// GSR GSR_INST (.GSR (1'b1) );
+// PUR PUR_INST (.PUR (1'b1) );
+
+ 
+/************************************/
+/*		Interconnect				*/
+/************************************/
+
+	reg [6:0]			LCD1Seg;
+	reg [6:0]			LCD2Seg;
+	reg [6:0]			LCD3Seg;
+	reg [6:0]			LCD4Seg;
+
+	reg [12:0]			lcdcounter;
+
+	reg [2:0] lcdnextstate;
+	reg [5:0] CharAddress;   // 64 chars in the map
+	wire [7:0] CharSegments;  // actually only 7 segments per LCD display digit
+	reg [1:0] lcdstate;
+
+	parameter lcd1state=0, lcd2state=1, lcd3state=2, lcd4state=3 ;
+
+	wire			LCDFrameclk;
+	wire			LCDPWMclk;
+
+//***********************************************************************
+//
+//  LCD
+//
+//***********************************************************************
+
+	// Counter to create LCD clocks
+	always @(posedge clk, negedge rst_n)
+	begin
+		if(rst_n == 0) begin
+			lcdcounter <= 0;
+		end else if (LCD_enb) begin
+			lcdcounter <= lcdcounter + 1;
+		end
+	end
+
+	assign LCDFrameclk = lcdcounter[12]; // LCD Frame clock = 240Hz - 360Hz	 (~60-90Hz * 4)
+	assign LCDPWMclk   = lcdcounter[2];  // LCD PWM clock (used to create 0V, 1V, 2V, 3V)
+
+
+	// Encode 4 LCD Digits
+	//   Uses ROM for Look-up table decoding
+	//   ROM init file is "LCDCharMap.mem"
+	//     see "LCDCharMapDecode.txt" for commented decode file
+	LCD4Digit LCD4Digit_inst(
+		.LCDFrameclk(LCDFrameclk),
+		.LCDPWMclk(LCDPWMclk),
+		.rstn(rst_n),
+		.LCDDP1(LCDDP1),
+		.LCDDP2(LCDDP2),
+		.LCDDP3(LCDDP3),
+		.LCDCol(LCDCol),
+		.LCD1(LCD1Seg),
+		.LCD2(LCD2Seg),
+		.LCD3(LCD3Seg),
+		.LCD4(LCD4Seg),
+
+		.LCD_COM0_sig(LCD_COM0_sig),
+		.LCD_COM1_sig(LCD_COM1_sig),
+		.LCD_COM2_sig(LCD_COM2_sig),
+		.LCD_COM3_sig(LCD_COM3_sig),
+
+		.LCD_5_sig(LCD_5_sig),
+		.LCD_6_sig(LCD_6_sig),
+		.LCD_7_sig(LCD_7_sig),
+		.LCD_8_sig(LCD_8_sig),
+		.LCD_9_sig(LCD_9_sig),
+		.LCD_10_sig(LCD_10_sig),
+		.LCD_11_sig(LCD_11_sig),
+		.LCD_12_sig(LCD_12_sig)
+		);
+
+	
+	//  4:1 Mux/Demux for the Character Mapper, to save EFB blocks
+	always @(lcdstate) 
+	begin
+		case (lcdstate)
+			lcd1state: begin
+				CharAddress <= LCD1[5:0]; 
+				LCD1Seg <= CharSegments[6:0];
+			end
+			lcd2state: begin
+				CharAddress <= LCD2[5:0]; 
+				LCD2Seg <= CharSegments[6:0];
+			end
+			lcd3state: begin
+				CharAddress <= LCD3[5:0]; 
+				LCD3Seg <= CharSegments[6:0];
+			end
+			lcd4state: begin
+				CharAddress <= LCD4[5:0]; 
+				LCD4Seg <= CharSegments[6:0];
+			end
+
+			default:begin
+				CharAddress <= LCD1[5:0]; 
+				LCD1Seg <= CharSegments[6:0];
+			end
+		endcase
+	end
+
+	// Character Mapper
+//	LCDCharMap LCDCharMap_inst (
+//		.Address(CharAddress), 
+//		.OutClock(clk), 
+//		.OutClockEn(1'b1), 
+//		.Reset(!rst_n), 
+//		.Q(CharSegments));
+	// Character Mapper
+	LCDCharMapLUTs LCDCharMap_inst (
+		.Address(CharAddress), 
+		.OutClock(clk), 
+		.OutClockEn(1'b1), 
+		.Reset(!rst_n), 
+		.Q(CharSegments));
+
+
+	// 	Free-running dividers, to control 4:1 mux
+	always @(posedge clk, negedge rst_n)
+	begin
+		if (rst_n == 0) begin
+			lcdstate <= lcd1state;	 // divide by 8
+			lcdnextstate <= 0;		 // divide by 4
+		end else begin
+			lcdnextstate <= lcdnextstate + 1;
+			
+			case (lcdstate)
+				lcd1state: begin
+					if (&lcdnextstate == 1) begin
+						lcdstate <= lcd2state;
+					end
+				end
+				lcd2state: begin
+					if (&lcdnextstate == 1) begin
+						lcdstate <= lcd3state;
+					end
+				end
+				lcd3state: begin
+					if (&lcdnextstate == 1) begin
+						lcdstate <= lcd4state;
+					end
+				end
+				lcd4state: begin
+					if (&lcdnextstate == 1) begin
+						lcdstate <= lcd1state;
+					end
+				end
+			endcase
+		end
+	end
+
+	//  output assignments	
+	assign LCD_COM0 = (LCD_enb) ? LCD_COM0_sig : 1'bZ;  
+	assign LCD_COM1 = (LCD_enb) ? LCD_COM1_sig : 1'bZ;  
+	assign LCD_COM2 = (LCD_enb) ? LCD_COM2_sig : 1'bZ;  
+	assign LCD_COM3 = (LCD_enb) ? LCD_COM3_sig : 1'bZ;  
+	assign LCD_5 = (LCD_enb) ? LCD_5_sig : 1'bZ;  
+	assign LCD_6 = (LCD_enb) ? LCD_6_sig : 1'bZ;  
+	assign LCD_7 = (LCD_enb) ? LCD_7_sig : 1'bZ;  
+	assign LCD_8 = (LCD_enb) ? LCD_8_sig : 1'bZ;  
+	assign LCD_9 = (LCD_enb) ? LCD_9_sig : 1'bZ;  
+	assign LCD_10 = (LCD_enb) ? LCD_10_sig : 1'bZ;  
+	assign LCD_11 = (LCD_enb) ? LCD_11_sig : 1'bZ;  
+	assign LCD_12 = (LCD_enb) ? LCD_12_sig : 1'bZ;  
+
+
+
+endmodule
+

@@ -1,0 +1,290 @@
+Archive member included because of file (symbol)
+
+./Release/libmico8.a(DDInit.o)
+                              Release/crt0.o (LatticeDDInit)
+./Release/libmico8.a(DDStructs.o)
+                              Release/../main.o (uart_core_uart)
+./Release/libmico8.a(MicoPassthru.o)
+                              ./Release/libmico8.a(DDInit.o) (MicoPassthruInit)
+./Release/libmico8.a(MicoSleepHelper.o)
+                              Release/../MicoEFB_I2C.o (MicoSleepMicroSecs)
+./Release/libmico8.a(MicoUart.o)
+                              ./Release/libmico8.a(DDInit.o) (MicoUartInit)
+/cygdrive/C/lscc/diamond/1.4/micosystem/gtools/lm8/bin/../lib/gcc/lm8-elf/4.4.3/r16/libgcc.a(_cmpqi2.o)
+                              Release/../EFB_SPI.o (__cmpqi2)
+/cygdrive/C/lscc/diamond/1.4/micosystem/gtools/lm8/bin/../lib/gcc/lm8-elf/4.4.3/r16/libgcc.a(_ucmphi2.o)
+                              Release/../EFB_SPI.o (__ucmphi2)
+/cygdrive/C/lscc/diamond/1.4/micosystem/gtools/lm8/bin/../lib/gcc/lm8-elf/4.4.3/r16/libgcc.a(_prologue.o)
+                              Release/../EFB_SPI.o (__prologue_save_r14)
+/cygdrive/C/lscc/diamond/1.4/micosystem/gtools/lm8/bin/../lib/gcc/lm8-elf/4.4.3/r16/libgcc.a(_epilogue.o)
+                              Release/../EFB_SPI.o (__epilogue_restore_r14)
+
+Allocating common symbols
+Common symbol       size              file
+
+TempConv            0x1               Release/../main.o
+RawTempValLo        0x1               Release/../main.o
+DisplayBuf          0x20              Release/../main.o
+Action              0x1               Release/../main.o
+RawTempValHi        0x1               Release/../main.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 Release/../EFB_SPI.o
+ .data          0x00000000        0x0 Release/../EFB_SPI.o
+ .bss           0x00000000        0x0 Release/../EFB_SPI.o
+ .text.MicoEFB_SPIRxData
+                0x00000000        0x0 Release/../EFB_SPI.o
+ .text.MicoEFB_SPITxData
+                0x00000000        0x0 Release/../EFB_SPI.o
+ .text.MicoEFB_SPIInit
+                0x00000000        0x0 Release/../EFB_SPI.o
+ .text          0x00000000        0x0 Release/../Mico8Interrupts.o
+ .data          0x00000000        0x0 Release/../Mico8Interrupts.o
+ .bss           0x00000000        0x0 Release/../Mico8Interrupts.o
+ .text          0x00000000        0x0 Release/../MicoEFB_I2C.o
+ .data          0x00000000        0x0 Release/../MicoEFB_I2C.o
+ .bss           0x00000000        0x0 Release/../MicoEFB_I2C.o
+ .text.MicoEFB_I2CRead
+                0x00000000        0x0 Release/../MicoEFB_I2C.o
+ .text          0x00000000        0x0 Release/../main.o
+ .data          0x00000000        0x0 Release/../main.o
+ .bss           0x00000000        0x0 Release/../main.o
+ .text.Hex2Char
+                0x00000000        0x0 Release/../main.o
+ .text.keyPress
+                0x00000000        0x0 Release/../main.o
+ .text          0x00000000        0x0 Release/crt0.o
+ .data          0x00000000        0x0 Release/crt0.o
+ .bss           0x00000000        0x0 Release/crt0.o
+ .text          0x00000000        0x0 ./Release/libmico8.a(DDInit.o)
+ .data          0x00000000        0x0 ./Release/libmico8.a(DDInit.o)
+ .bss           0x00000000        0x0 ./Release/libmico8.a(DDInit.o)
+ .text          0x00000000        0x0 ./Release/libmico8.a(DDStructs.o)
+ .bss           0x00000000        0x0 ./Release/libmico8.a(DDStructs.o)
+ .text          0x00000000        0x0 ./Release/libmico8.a(MicoPassthru.o)
+ .data          0x00000000        0x0 ./Release/libmico8.a(MicoPassthru.o)
+ .bss           0x00000000        0x0 ./Release/libmico8.a(MicoPassthru.o)
+ .text.MicoPassthruISR
+                0x00000000        0x0 ./Release/libmico8.a(MicoPassthru.o)
+ .data          0x00000000        0x0 ./Release/libmico8.a(MicoSleepHelper.o)
+ .bss           0x00000000        0x0 ./Release/libmico8.a(MicoSleepHelper.o)
+ .text          0x00000000        0x0 ./Release/libmico8.a(MicoUart.o)
+ .data          0x00000000        0x0 ./Release/libmico8.a(MicoUart.o)
+ .bss           0x00000000        0x0 ./Release/libmico8.a(MicoUart.o)
+ .data          0x00000000        0x0 /cygdrive/C/lscc/diamond/1.4/micosystem/gtools/lm8/bin/../lib/gcc/lm8-elf/4.4.3/r16/libgcc.a(_cmpqi2.o)
+ .bss           0x00000000        0x0 /cygdrive/C/lscc/diamond/1.4/micosystem/gtools/lm8/bin/../lib/gcc/lm8-elf/4.4.3/r16/libgcc.a(_cmpqi2.o)
+ .data          0x00000000        0x0 /cygdrive/C/lscc/diamond/1.4/micosystem/gtools/lm8/bin/../lib/gcc/lm8-elf/4.4.3/r16/libgcc.a(_ucmphi2.o)
+ .bss           0x00000000        0x0 /cygdrive/C/lscc/diamond/1.4/micosystem/gtools/lm8/bin/../lib/gcc/lm8-elf/4.4.3/r16/libgcc.a(_ucmphi2.o)
+ .data          0x00000000        0x0 /cygdrive/C/lscc/diamond/1.4/micosystem/gtools/lm8/bin/../lib/gcc/lm8-elf/4.4.3/r16/libgcc.a(_prologue.o)
+ .bss           0x00000000        0x0 /cygdrive/C/lscc/diamond/1.4/micosystem/gtools/lm8/bin/../lib/gcc/lm8-elf/4.4.3/r16/libgcc.a(_prologue.o)
+ .data          0x00000000        0x0 /cygdrive/C/lscc/diamond/1.4/micosystem/gtools/lm8/bin/../lib/gcc/lm8-elf/4.4.3/r16/libgcc.a(_epilogue.o)
+ .bss           0x00000000        0x0 /cygdrive/C/lscc/diamond/1.4/micosystem/gtools/lm8/bin/../lib/gcc/lm8-elf/4.4.3/r16/libgcc.a(_epilogue.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00001800         xr
+data             0x00000000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD Release/../EFB_SPI.o
+LOAD Release/../Mico8Interrupts.o
+LOAD Release/../MicoEFB_I2C.o
+LOAD Release/../main.o
+LOAD Release/crt0.o
+LOAD ./Release/libmico8.a
+LOAD /cygdrive/C/lscc/diamond/1.4/micosystem/gtools/lm8/bin/../lib/gcc/lm8-elf/4.4.3/r16/libgcc.a
+
+.text           0x00000000      0xada
+                0x00000000                _ftext = .
+ *(.vectors)
+ .vectors       0x00000000       0x4e Release/crt0.o
+                0x00000003                _start
+                0x0000004b                __irq_save_restore2
+ *(.vectors)
+ *(.text .text.*)
+ .text.MicoEFB_SPITransfer
+                0x0000004e      0x1e9 Release/../EFB_SPI.o
+                0x0000004e                MicoEFB_SPITransfer
+ .text.MicoEFB_I2CStart
+                0x00000237      0x12c Release/../MicoEFB_I2C.o
+ .text.MicoEFB_I2CWrite
+                0x00000363      0x141 Release/../MicoEFB_I2C.o
+                0x00000363                MicoEFB_I2CWrite
+ .text.SendString
+                0x000004a4       0x66 Release/../main.o
+                0x000004a4                SendString
+ .text.showMainMenu
+                0x0000050a       0x4e Release/../main.o
+                0x0000050a                showMainMenu
+ .text.main     0x00000558      0x348 Release/../main.o
+                0x00000558                main
+ .text.LatticeDDInit
+                0x000008a0       0x21 ./Release/libmico8.a(DDInit.o)
+                0x000008a0                LatticeDDInit
+ .text.MicoPassthruInit
+                0x000008c1        0x3 ./Release/libmico8.a(MicoPassthru.o)
+                0x000008c1                MicoPassthruInit
+ .text          0x000008c4       0x5d ./Release/libmico8.a(MicoSleepHelper.o)
+                0x000008c4                MicoSleepMicroSecs
+                0x000008e5                MicoSleepMilliSecs
+ .text.MicoUartInit
+                0x00000921        0x3 ./Release/libmico8.a(MicoUart.o)
+                0x00000921                MicoUartInit
+ .text.MicoUart_getC
+                0x00000924       0xb4 ./Release/libmico8.a(MicoUart.o)
+                0x00000924                MicoUart_getC
+ .text.MicoUart_putC
+                0x000009d8       0x75 ./Release/libmico8.a(MicoUart.o)
+                0x000009d8                MicoUart_putC
+ .text          0x00000a4d       0x33 /cygdrive/C/lscc/diamond/1.4/micosystem/gtools/lm8/bin/../lib/gcc/lm8-elf/4.4.3/r16/libgcc.a(_cmpqi2.o)
+                0x00000a4d                __cmpqi2
+ .text          0x00000a80       0x1e /cygdrive/C/lscc/diamond/1.4/micosystem/gtools/lm8/bin/../lib/gcc/lm8-elf/4.4.3/r16/libgcc.a(_ucmphi2.o)
+                0x00000a80                __ucmphi2
+ .text          0x00000a9e       0x1e /cygdrive/C/lscc/diamond/1.4/micosystem/gtools/lm8/bin/../lib/gcc/lm8-elf/4.4.3/r16/libgcc.a(_prologue.o)
+                0x00000a9e                __prologue_save_r14
+                0x00000aa7                __prologue_save_r11
+                0x00000ab0                __prologue_save_r10
+ .text          0x00000abc       0x1e /cygdrive/C/lscc/diamond/1.4/micosystem/gtools/lm8/bin/../lib/gcc/lm8-elf/4.4.3/r16/libgcc.a(_epilogue.o)
+                0x00000ac5                __epilogue_restore_r11
+                0x00000ace                __epilogue_restore_r10
+                0x00000abc                __epilogue_restore_r14
+ *crtbegin*.o(.ctors)
+ *(EXCLUDE_FILE(*crtend*.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+ *crtbegin*.o(.dtors)
+ *(EXCLUDE_FILE(*crtend*.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+ *(.jcr)
+                0x00000ada                _etext = .
+
+.data           0x00000000      0x174 load address 0x00001800
+                0x00000000                PROVIDE (__data_start, .)
+                0x00000000        0x4 LONG 0x0
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00000004       0x10 ./Release/libmico8.a(DDStructs.o)
+                0x00000006                uart_core_uart
+                0x00000004                lm8_LM8
+                0x0000000f                slave_passthru_slave_EFB
+                0x0000000a                slave_passthru_slave_LCD
+ *(.data*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.1
+                0x00000014      0x143 Release/../main.o
+ .rodata.str1.1
+                0x00000157       0x1d ./Release/libmico8.a(DDStructs.o)
+ *(.rodata*)
+                0x00000174                . = ALIGN (0x2)
+                0x00000174                _edata = .
+                0x00000174                PROVIDE (__data_end, .)
+
+.bss            0x00000174       0x24 load address 0x00001974
+                0x00000174                PROVIDE (__bss_start, .)
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ *(.scommon)
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ *(COMMON)
+ COMMON         0x00000174       0x24 Release/../main.o
+                0x00000174                TempConv
+                0x00000175                RawTempValLo
+                0x00000176                DisplayBuf
+                0x00000196                Action
+                0x00000197                RawTempValHi
+                0x00000198                PROVIDE (__bss_end, .)
+
+.irq_stack
+ *(.irq_stack)
+                0x00000198                . = ALIGN (0x4)
+                0x00000198                .end = .
+                0x000003fc                PROVIDE (__stack, 0x3fc)
+                0x00001800                __data_load_start = LOADADDR (.data)
+                0x00001974                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x90
+ *(.comment)
+ .comment       0x00000000       0x12 Release/../EFB_SPI.o
+ .comment       0x00000012       0x12 Release/../Mico8Interrupts.o
+ .comment       0x00000024       0x12 Release/../MicoEFB_I2C.o
+ .comment       0x00000036       0x12 Release/../main.o
+ .comment       0x00000048       0x12 ./Release/libmico8.a(DDInit.o)
+ .comment       0x0000005a       0x12 ./Release/libmico8.a(DDStructs.o)
+ .comment       0x0000006c       0x12 ./Release/libmico8.a(MicoPassthru.o)
+ .comment       0x0000007e       0x12 ./Release/libmico8.a(MicoUart.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+OUTPUT(I2C_lite.elf elf32-lm8)

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="LCDCharMap" module="ROM" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2012 02 29 13:10:05.430" version="5.0" type="Module" synthesis="" source_format="Verilog">
+  <Package>
+		<File name="LCDCharMap.lpc" type="lpc" modified="2012 02 29 13:10:01.758"/>
+		<File name="LCDCharMap.v" type="top_level_verilog" modified="2012 02 29 13:10:01.914"/>
+		<File name="LCDCharMap_tmpl.v" type="template_verilog" modified="2012 02 29 13:10:01.914"/>
+		<File name="lcdcharmap.mem" type="mem" modified="2011 04 07 23:20:04.000"/>
+		<File name="tb_LCDCharMap_tmpl.v" type="testbench_verilog" modified="2012 02 29 13:10:01.914"/>
+  </Package>
+</DiamondModule>

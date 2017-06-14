@@ -1,0 +1,35 @@
+[Device]
+Family=machxo2
+PartType=LCMXO2-1200ZE
+PartName=LCMXO2-1200ZE-1MG132C
+SpeedGrade=1
+Package=CSBGA132
+OperatingCondition=COM
+Status=S
+
+[IP]
+VendorName=Lattice Semiconductor Corporation
+CoreType=LPM
+CoreStatus=Demo
+CoreName=Power Controller
+CoreRevision=1.0
+ModuleName=pwr_ctrl
+SourceFormat=Verilog HDL
+ParameterFileVersion=1.0
+Date=03/08/2012
+Time=11:50:11
+
+[Parameters]
+Verilog=1
+VHDL=0
+EDIF=1
+Destination=Synplicity
+Expression=BusA(0 to 7)
+Order=Big Endian [MSB:LSB]
+IO=0
+entry=Configuration
+s2s=Bypass
+wake=Configuration
+standby=1
+bandgap_off=0
+por_off=0

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="1.3" title="XO2_Pico" device="LCMXO2-1200ZE-1MG132C" default_implementation="XO2_Pico">
+    <Options/>
+    <Implementation title="XO2_Pico" dir="XO2_Pico" description="XO2_Pico" default_strategy="Strategy1">
+        <Options top="top_XO2"/>
+        <Source name="../../Source/PicoLCDDriver/lcd4digit.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../Source/PicoLCDDriver/LCDCharMapLUTs.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="../../Source/PicoLCDDriver/LCDEncoding4to1.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../Source/PicoLCDDriver/PicoLCDdriver.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../Source/PicoLCDDriver/pwm.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../Source/PicoLCDDriver/lcdencoding4to1com.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../mico8/soc/mico8.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../Source/wb2lcd.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../../Source/XO2_top.v" type="Verilog" type_short="Verilog">
+            <Options top_module="top_XO2"/>
+        </Source>
+        <Source name="../../IPCore/myEFB/myEFB.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="XO2_Pico/XO2_Pico.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="XO2_Pico/XO2_Pico.xcf" type="ispVM Download Project" type_short="ispVM">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="Strategy1.sty"/>
+</BaliProject>

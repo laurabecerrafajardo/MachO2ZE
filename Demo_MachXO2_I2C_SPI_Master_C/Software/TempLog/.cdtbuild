@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fileVersion 3.1.0?>
+
+<ManagedProjectBuildInfo>
+<project id="TempLog.com.lattice.mdk8.managedbuilder.ui.projectType.excutable.376743983" name="LatticeMico8  Elf Executable" projectType="com.lattice.mdk8.managedbuilder.ui.projectType.excutable">
+<configuration artifactName="TempLog" cleanCommand="rm -f" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.VCErrorParser" id="com.lattice.mdk8.managedbuilder.ui.configuration.release.1668652748" name="Release" parent="com.lattice.mdk8.managedbuilder.ui.configuration.release">
+<toolChain id="com.lattice.mdk8.managedbuilder.ui.toolChain.release.973722310" name="Release Toolchain" superClass="com.lattice.mdk8.managedbuilder.ui.toolChain.release">
+<tool id="com.lattice.mdk8.managedbuilder.ui.tool.release.compiler.231963980" name="LatticeMico8 C/C++ Compiler" superClass="com.lattice.mdk8.managedbuilder.ui.tool.release.compiler">
+<option id="com.lattice.mdk8.managedbuilder.ui.option.optim.2014456121" superClass="com.lattice.mdk8.managedbuilder.ui.option.optim" value="com.lattice.mdk8.managedbuilder.ui.enumeratedOptionValue.optim1" valueType="enumerated"/>
+</tool>
+<tool id="com.lattice.mdk8.managedbuilder.ui.tool.syslib.release.compiler.471205584" name="LatticeMico8 C System Library Compiler" superClass="com.lattice.mdk8.managedbuilder.ui.tool.syslib.release.compiler">
+<option id="com.lattice.mdk8.managedbuilder.ui.lib.option.syslib.release.optim.1426380343" superClass="com.lattice.mdk8.managedbuilder.ui.lib.option.syslib.release.optim" value="com.lattice.mdk8.managedbuilder.ui.lib.enumeratedOptionValue.optims" valueType="enumerated"/>
+</tool>
+<tool id="com.lattice.mdk8.managedbuilder.ui.tool.release.linker.1277520945" name="LatticeMico8 Linker" superClass="com.lattice.mdk8.managedbuilder.ui.tool.release.linker">
+<option id="com.lattice.mdk8.managedbuilder.ui.option.linker.flags.328722959" superClass="com.lattice.mdk8.managedbuilder.ui.option.linker.flags" value="-Wl,--gc-sections -Wl,-Map,mem.map" valueType="string"/>
+</tool>
+<macros/>
+</toolChain>
+</configuration>
+</project>
+</ManagedProjectBuildInfo>
