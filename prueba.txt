@@ -4,4 +4,6 @@ test experimental branch
 
 create conflict between branches
 
-volvemos al developer para crear un conflicto.. linea de conflicto
+creamos un experimental 2
+
+ha hehco el merge???
